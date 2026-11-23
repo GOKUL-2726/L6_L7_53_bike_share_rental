@@ -4,14 +4,23 @@ from bike_share_rental_parser import parse_ride_duration, format_station_code, p
 @given(st.text() | st.none())
 def test_parse_ride_duration_no_crash(s):
     # To-Do: Using try and except complete this function.
-    pass
+    try:
+        parse_ride_duration(s)
+    except Exception as e:
+        assert False, f"parse_ride_duration crashed with: {e}"
 
 @given(st.text() | st.none())
 def test_format_station_code_no_crash(s):
     # To-Do: Using try and except complete this function.
-    pass
+    try:
+        format_station_code(s)
+    except Exception as e:
+        assert False, f"format_station_code crashed with: {e}"
 
 @given(st.text() | st.none())
 def test_parse_ride_log_no_crash(s):
     # To-Do: Using try and except complete this function.
-    pass
+    try:
+        parse_ride_log(s)
+    except Exception as e:
+        assert False, f"parse_ride_log crashed with: {e}"
